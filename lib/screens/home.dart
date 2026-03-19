@@ -76,7 +76,6 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // ── AppBar ───────────────────────────────
   Widget _buildAppBar() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
@@ -120,7 +119,6 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // ── Banner / Special Offer ───────────────
   Widget _buildBannerSection() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -180,7 +178,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
-                // Book cover image side
+
                 ClipRRect(
                   borderRadius: const BorderRadius.only(
                     topRight: Radius.circular(16),
@@ -196,8 +194,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         color: Colors.white,
                       ),
                     ),
-                    // Replace with:
-                    // Image.asset('assets/images/banner_book.png', fit: BoxFit.cover)
                   ),
                 ),
               ],
@@ -225,7 +221,6 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // ── Section Header ───────────────────────
   Widget _buildSectionHeader(String title, {required VoidCallback onSeeAll}) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -256,7 +251,6 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // ── Top of Week ──────────────────────────
   Widget _buildTopOfWeek() {
     return SizedBox(
       height: 200,
@@ -294,8 +288,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                     ),
-                    // Replace with:
-                    // Image.asset('assets/images/book_$i.png', fit: BoxFit.cover)
                   ),
                 ),
                 const SizedBox(height: 8),
@@ -322,7 +314,6 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // ── Best Vendors ─────────────────────────
   Widget _buildVendors() {
     final List<Color> vendorColors = [
       const Color(0xFFF0EDFA),
@@ -362,7 +353,6 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // ── Authors ──────────────────────────────
   Widget _buildAuthors() {
     final List<Color> avatarColors = [
       const Color(0xFF8B7355),
@@ -415,7 +405,6 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // ── Bottom Navigation ────────────────────
   Widget _buildBottomNav() {
     final items = [
       {'icon': Icons.home_rounded, 'label': 'Home'},

@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 
 const Color _purple = Color(0xFF5B3FA6);
 
-// ─────────────────────────────────────────
-// Model
-// ─────────────────────────────────────────
 class CartItem {
   final String title;
   final String imagePath;
@@ -21,9 +18,6 @@ class CartItem {
   });
 }
 
-// ─────────────────────────────────────────
-// Cart Screen
-// ─────────────────────────────────────────
 class CartScreen extends StatefulWidget {
   const CartScreen({super.key});
   static const String routeName = '/cart';
@@ -183,7 +177,6 @@ class _CartScreenState extends State<CartScreen> {
     );
   }
 
-  // ── Checkout Button ──────────────────────
   Widget _buildCheckoutButton() {
     return Padding(
       padding: const EdgeInsets.fromLTRB(20, 8, 20, 24),
@@ -219,7 +212,6 @@ class _CartScreenState extends State<CartScreen> {
     );
   }
 
-  // ── Empty State ──────────────────────────
   Widget _buildEmptyState() {
     return Center(
       child: Column(
@@ -244,7 +236,6 @@ class _CartScreenState extends State<CartScreen> {
     );
   }
 
-  // ── Bottom Navigation ────────────────────
   Widget _buildBottomNav() {
     final items = [
       {'icon': Icons.home_rounded, 'label': 'Home'},
@@ -310,9 +301,6 @@ class _CartScreenState extends State<CartScreen> {
   }
 }
 
-// ─────────────────────────────────────────
-// Cart Card Widget
-// ─────────────────────────────────────────
 class _CartCard extends StatelessWidget {
   final CartItem item;
   final VoidCallback onDelete;
@@ -406,7 +394,6 @@ class _CartCard extends StatelessWidget {
 
                 const SizedBox(height: 10),
 
-                // Price + qty control
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -419,7 +406,6 @@ class _CartCard extends StatelessWidget {
                       ),
                     ),
 
-                    // Qty row
                     Row(
                       children: [
                         _qtyBtn(icon: Icons.remove, onTap: onDecrement),

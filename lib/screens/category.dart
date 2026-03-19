@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 
 const Color _purple = Color(0xFF5B3FA6);
 
-// ─────────────────────────────────────────
-// Model
-// ─────────────────────────────────────────
 class BookModel {
   final String title;
   final String price;
@@ -19,9 +16,6 @@ class BookModel {
   });
 }
 
-// ─────────────────────────────────────────
-// Category Screen
-// ─────────────────────────────────────────
 class CategoryScreen extends StatefulWidget {
   const CategoryScreen({super.key});
   static const String routeName = '/category';
@@ -101,7 +95,6 @@ class _CategoryScreenState extends State<CategoryScreen> {
     );
   }
 
-  // ── AppBar ───────────────────────────────
   Widget _buildAppBar() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
@@ -145,7 +138,6 @@ class _CategoryScreenState extends State<CategoryScreen> {
     );
   }
 
-  // ── Category Tabs ────────────────────────
   Widget _buildCategoryTabs() {
     return SizedBox(
       height: 36,
@@ -184,7 +176,6 @@ class _CategoryScreenState extends State<CategoryScreen> {
     );
   }
 
-  // ── Books Grid ───────────────────────────
   Widget _buildGrid() {
     return GridView.builder(
       padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -199,7 +190,6 @@ class _CategoryScreenState extends State<CategoryScreen> {
     );
   }
 
-  // ── Bottom Navigation ────────────────────
   Widget _buildBottomNav() {
     final items = [
       {'icon': Icons.home_rounded, 'label': 'Home'},
@@ -265,9 +255,6 @@ class _CategoryScreenState extends State<CategoryScreen> {
   }
 }
 
-// ─────────────────────────────────────────
-// Book Card Widget
-// ─────────────────────────────────────────
 class _BookCard extends StatelessWidget {
   final BookModel book;
   const _BookCard({required this.book});
@@ -275,10 +262,7 @@ class _BookCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        // Navigator.push(context,
-        //   MaterialPageRoute(builder: (_) => BookDetailScreen()));
-      },
+      onTap: () {},
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

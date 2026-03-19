@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 
 const Color _purple = Color(0xFF5B3FA6);
 
-// ─────────────────────────────────────────
-// Model
-// ─────────────────────────────────────────
 enum OrderStatus { onTheWay, delivered, cancelled }
 
 class NotificationItem {
@@ -21,15 +18,11 @@ class NotificationItem {
   });
 }
 
-// ─────────────────────────────────────────
-// Notification Screen
-// ─────────────────────────────────────────
 class NotificationScreen extends StatelessWidget {
   const NotificationScreen({super.key});
 
   static const String routeName = '/notification';
 
-  // ── Sample Data ──────────────────────────
   static const List<NotificationItem> _current = [
     NotificationItem(
       bookTitle: 'Carrie Fisher',
@@ -91,7 +84,6 @@ class NotificationScreen extends StatelessWidget {
     );
   }
 
-  // ── AppBar ───────────────────────────────
   Widget _buildAppBar(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
@@ -123,7 +115,6 @@ class NotificationScreen extends StatelessWidget {
     );
   }
 
-  // ── Section label ────────────────────────
   Widget _buildSectionLabel(String label) {
     return Text(
       label,
@@ -136,9 +127,6 @@ class NotificationScreen extends StatelessWidget {
   }
 }
 
-// ─────────────────────────────────────────
-// Notification Card
-// ─────────────────────────────────────────
 class _NotificationCard extends StatelessWidget {
   final NotificationItem item;
   const _NotificationCard({required this.item});

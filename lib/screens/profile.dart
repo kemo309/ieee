@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 
 const Color _purple = Color(0xFF5B3FA6);
 
-// ─────────────────────────────────────────
-// Profile Screen
-// ─────────────────────────────────────────
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
   static const String routeName = '/profile';
@@ -45,7 +42,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  // ── AppBar ───────────────────────────────
   Widget _buildAppBar() {
     return const Padding(
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 14),
@@ -62,7 +58,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  // ── User Card ────────────────────────────
   Widget _buildUserCard() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -142,7 +137,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  // ── Menu List ────────────────────────────
   Widget _buildMenuList() {
     return ListView.separated(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
@@ -160,7 +154,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  // ── Bottom Navigation ────────────────────
   Widget _buildBottomNav() {
     final items = [
       {'icon': Icons.home_rounded, 'label': 'Home'},
@@ -226,9 +219,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
   }
 }
 
-// ─────────────────────────────────────────
-// Menu Item Widget
-// ─────────────────────────────────────────
 class _MenuItem extends StatelessWidget {
   final IconData icon;
   final String label;

@@ -1,14 +1,8 @@
 import 'package:flutter/material.dart';
 
-// ─────────────────────────────────────────
-// Constants
-// ─────────────────────────────────────────
 const Color _purple = Color(0xFF5B3FA6);
 const Color _gold = Color(0xFFFFC107);
 
-// ─────────────────────────────────────────
-// Book Detail Screen
-// ─────────────────────────────────────────
 class BookDetailScreen extends StatefulWidget {
   const BookDetailScreen({super.key});
   static const String routeName = '/details';
@@ -43,11 +37,9 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
     );
   }
 
-  // ── Hero Image Section ───────────────────
   Widget _buildHeroImage(BuildContext context) {
     return Stack(
       children: [
-        // Background gradient
         Container(
           height: 340,
           width: double.infinity,
@@ -140,7 +132,6 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
     );
   }
 
-  // ── Book Info Section ────────────────────
   Widget _buildBookInfo() {
     return Padding(
       padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
@@ -239,7 +230,6 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
 
           const SizedBox(height: 10),
 
-          // Stars + rating
           Row(
             children: [
               ...List.generate(
@@ -355,7 +345,6 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
     );
   }
 
-  // ── Bottom Actions ───────────────────────
   Widget _buildBottomActions() {
     return Container(
       padding: const EdgeInsets.fromLTRB(20, 12, 20, 28),
@@ -371,7 +360,6 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
       ),
       child: Row(
         children: [
-          // Continue shopping
           Expanded(
             child: SizedBox(
               height: 52,
@@ -396,7 +384,6 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
 
           const SizedBox(width: 12),
 
-          // View cart
           SizedBox(
             height: 52,
             child: OutlinedButton(
